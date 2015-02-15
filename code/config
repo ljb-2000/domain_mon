@@ -1,0 +1,12 @@
+[DB]
+db_host = 127.0.0.1
+username = test
+passwd = test
+db = url_mon
+
+[URL_BASE]
+table_name = 'montior_url'
+
+[MON_BASE]
+table_name = 'status_code'
+
