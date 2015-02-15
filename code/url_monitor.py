@@ -38,7 +38,7 @@ def status_2_db(id, status):
     '''把结果写入db'''
     conn = MySQLdb.connect(host=db_hostname, user=db_user, passwd=db_pass, db='url_mon',charset='utf8')
     cur = conn.cursor()
-    sql_get_id_status = "select status_code from status_code where ID = %d andrep_point = '%s' ;" %(id, local_ip)
+    sql_get_id_status = "select status_code from status_code where ID = %d and rep_point = '%s' ;" %(id, local_ip)
     cur.execute(sql_get_id_status)
     last_code = cur.fetchone()
     if last_code:
