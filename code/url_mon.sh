@@ -4,6 +4,7 @@ db_host="localhost"
 db_user="test"
 pass_wd="test"
 db_default="url_mon"
+local_ip="192.168.31.105"
 ###函数定义区域
 sql_exec(){
     ###定义了使用sql的方法###
@@ -27,7 +28,7 @@ status_2_sql(){
     ###根据ID把状态写会数据库###
     ID=$1
     st_code=$2
-    sql_cmd="update status_code set status_code = ${st_code} where ID =${ID} and rep_point = '192.168.31.105';"
+    sql_cmd="update status_code set status_code = ${st_code} where ID =${ID} and rep_point = '${local_ip}';"
     sql_exec ${sql_cmd}
 }
 main(){
